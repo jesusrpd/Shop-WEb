@@ -1,0 +1,12 @@
+@mixin btn($name, $colo){
+    .btn-#{$name}{
+        @extend %btn;
+        background: color($name);  
+
+        &:hover{
+            background: lighten($color: $colo, $amount: 20);
+        }
+    }
+}
+
+@include btn('primary', color('primary'));

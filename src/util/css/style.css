@@ -23,6 +23,13 @@ a, button {
   font-weight: 300;
 }
 
+.btn-primary {
+  background: #301D4F;
+}
+.btn-primary:hover {
+  background: #5d389a;
+}
+
 .nav {
   width: 100%;
   border-bottom: 5px solid #301D4F;
@@ -60,18 +67,36 @@ a, button {
   border-radius: 10px;
   margin: 30px;
 }
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+}
 .card-img {
   width: 300px;
   height: 230px;
   border-radius: 10px 10px 0 0;
 }
-.btn-primary {
-  padding: 5px;
-  border-radius: 5px;
+.card-info {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0;
+}
+.card-button {
+  width: 80%;
+  margin-left: 25px;
+  border: none;
 }
 
 .btn-primary {
-  background: #301D4F;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ffff;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
