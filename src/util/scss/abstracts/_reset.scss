@@ -5,3 +5,19 @@
     font-size: 16px;
     font-family: 'Oswald', sans-serif;
 }
+
+ul{
+    display: flex;
+    list-style-type: none;
+    display: inline-block;
+}
+
+li{
+    display: inline-block;
+}
+
+a, button{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+}

@@ -7,4 +7,71 @@
   font-family: "Oswald", sans-serif;
 }
 
+ul {
+  display: flex;
+  list-style-type: none;
+  display: inline-block;
+}
+
+li {
+  display: inline-block;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.nav {
+  width: 100%;
+  border-bottom: 5px solid #301D4F;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  margin: 10px;
+  cursor: pointer;
+}
+.nav-link a {
+  color: #301D4F;
+  font-size: 1.3rem;
+}
+
+.icon {
+  margin: 0 5px;
+}
+
+.page {
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  min-width: 300px;
+  min-height: 400px;
+  box-shadow: 5px 5px 15px #301D4F;
+  border-radius: 10px;
+  margin: 30px;
+}
+.card-img {
+  width: 300px;
+  height: 230px;
+  border-radius: 10px 10px 0 0;
+}
+.btn-primary {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #301D4F;
+}
+
 /*# sourceMappingURL=style.css.map */

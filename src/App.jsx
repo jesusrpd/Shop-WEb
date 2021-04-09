@@ -1,7 +1,12 @@
 import React from 'react';
+import Nav from './components/Nav';
+import Card from './components/Card';
 
 const App = ()=>(
-    <h1>App</h1>
+    <div className="page">
+        <Nav/>
+        <Card/>
+    </div>
 );
 
 export default App;

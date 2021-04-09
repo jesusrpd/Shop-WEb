@@ -2,4 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap');
 
 //ABSTRACTS
-@import './abstracts/reset';
+@import 
+    './abstracts/colors',
+    './abstracts/functions',
+    './abstracts/reset';
+
+//COMPONENTS
+@import 
+    './components/nav',
+    './components/icon',
+    './components/layout',
+    './components/card',
+    './components/btn';

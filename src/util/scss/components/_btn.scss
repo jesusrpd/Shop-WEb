@@ -1,0 +1,15 @@
+%btn{
+    padding: 5px;
+    border-radius: 5px;
+    color: color('white');
+}
+
+.btn{
+    &-primary{
+        @extend %btn;
+    }
+
+    &-primary{
+        background: color('primary');
+    }
+}
