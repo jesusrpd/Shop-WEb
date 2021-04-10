@@ -21,3 +21,10 @@ a, button{
     cursor: pointer;
     font-weight: 300;
 }
+
+input{
+    border: none;
+    border-bottom: 3px solid color('primary');
+    outline: none;
+    padding: 10px;
+}

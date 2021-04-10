@@ -23,6 +23,13 @@ a, button {
   font-weight: 300;
 }
 
+input {
+  border: none;
+  border-bottom: 3px solid #301D4F;
+  outline: none;
+  padding: 10px;
+}
+
 .btn-primary {
   background: #301D4F;
 }
@@ -97,6 +104,71 @@ a, button {
   border-radius: 5px;
   color: #ffff;
   transition: all 0.3s ease-in-out;
+}
+
+.select {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.form {
+  width: 350px;
+  height: 450px;
+  background: #ffff;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 250px;
+}
+.form-page {
+  width: 100%;
+  height: 100vh;
+  background: rgba(24, 22, 22, 0.5);
+  position: fixed;
+  z-index: 5;
+  display: none;
+}
+.form-title {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 30px;
+}
+.form-campo {
+  width: 70%;
+  height: fit-content;
+  margin: 10px auto;
+}
+.form-campo input {
+  width: 100%;
+}
+.form-campo-container {
+  margin: 50px 0;
+}
+.form-button {
+  display: block;
+  width: 80%;
+  border: none;
+  height: fit-content;
+  margin: auto;
+}
+.form-link {
+  margin: 20px 0;
+  text-align: center;
+  display: block;
+  color: #181616;
+  text-decoration: underline;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: #ffff;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
