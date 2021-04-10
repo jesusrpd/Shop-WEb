@@ -2,7 +2,7 @@ import React from 'react';
 
 const IniciarSesion = ({display, onClick})=>(
     <div className={display === true ? "form-page open": "form-page"}>
-        <p onClick={()=> onClick(false)} className="close">X</p>
+        <p onClick={()=> onClick('i')} className="close">X</p>
         <form className="form">
             <h2 className="form-title">Iniciar Sesión</h2>
             <div className="form-campo-container">

@@ -1,39 +1,34 @@
 import React, {useState} from 'react';
 import Nav from './components/Nav';
-import Card from './components/Card';
-import Filtro from './components/Filtro';
 import IniciarSesion from './components/IniciarSesion';
 import Registrarse from './components/Registrarse';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Inicio from './pages/Inicio';
+import Carrito from './pages/Carrito';
 
 const App = ()=>{
 
-    const [display, setDisplay] = useState(false);
+    const [displayIniciar, setDisplayIniciar] = useState(false);
+    const [displayRegistrar, setDisplayRegistrar] = useState(false);
 
-    const handleClick = d=>{
-        setDisplay(d);
+    const handleDisplay = d =>{
+        if (d === 'i') {
+            setDisplayIniciar(!displayIniciar);
+        }else{
+            setDisplayRegistrar(!displayRegistrar);
+        }
     }
 
     return(
-        <>
-            <IniciarSesion display={display} onClick={handleClick}/>
-            <Registrarse display={display} onClick={handleClick}/>
+        <Router>
+            <IniciarSesion display={displayIniciar} onClick={handleDisplay}/>
+            <Registrarse display={displayRegistrar} onClick={handleDisplay}/>
             <div className="page">
-                <Nav onClick={handleClick}/>
-                <Filtro/>
-                <div className="card-container">
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </div>
+                <Nav onClick={handleDisplay}/>
+                <Route exact path="/" component={Inicio}/>
+                <Route path="/carrito" component={Carrito}/>
             </div>
-        </>
+        </Router>
     );
 };
 

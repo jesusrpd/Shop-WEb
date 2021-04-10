@@ -4,7 +4,7 @@ const IniciarSesion = ({display, onClick})=>{
 
     return(
         <div className={display === true ? "form-page open": "form-page"}>
-            <p onClick={()=> onClick(false)} className="close">X</p>
+            <p onClick={()=> onClick('r')} className="close">X</p>
             <form className="form">
                 <h2 className="form-title">Registrarse</h2>
                 <div className="form-campo-container">

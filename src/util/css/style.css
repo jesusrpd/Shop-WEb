@@ -37,6 +37,16 @@ input {
   background: #5d389a;
 }
 
+@keyframes aparecer {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .nav {
   width: 100%;
   border-bottom: 5px solid #301D4F;
@@ -118,6 +128,7 @@ input {
   border-radius: 10px;
   margin: auto;
   margin-top: 250px;
+  animation: aparecer 0.3s ease-in-out;
 }
 .form-page {
   width: 100%;
@@ -169,6 +180,7 @@ input {
   color: #ffff;
   font-size: 3rem;
   cursor: pointer;
+  animation: aparecer 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

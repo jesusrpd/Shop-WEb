@@ -1,4 +1,11 @@
 .form{
+    width: 350px;
+    height: 450px;
+    background: color('white');
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 250px;
+    animation: aparecer .3s ease-in-out;
 
     &-page{
         width: 100%;
@@ -8,13 +15,6 @@
         z-index: 5;
         display: none;
     }
-
-    width: 350px;
-    height: 450px;
-    background: color('white');
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 250px;
 
     &-title{
         font-size: 2rem;
@@ -64,4 +64,5 @@
     color: color('white');
     font-size: 3rem;
     cursor: pointer;
+    animation: aparecer .3s ease-in-out;
 }
