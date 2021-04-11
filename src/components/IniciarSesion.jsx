@@ -1,24 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import Cookie from 'universal-cookie';
 
-const IniciarSesion = ({display, onClick})=>(
-    <div className={display === true ? "form-page open": "form-page"}>
-        <p onClick={()=> onClick('i')} className="close">X</p>
-        <form className="form">
-            <h2 className="form-title">Iniciar Sesión</h2>
-            <div className="form-campo-container">
-                <div className="form-campo">
-                    <img src="" alt=""/>
-                    <input placeholder="Nombre o email" type="text" name="" id=""/>
+const IniciarSesion = ({display, onClick})=>{
+
+    const [form, setForm] = useState({email:'', password:''});
+
+    const handleChange = e =>{
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async e =>{
+        e.preventDefault();
+        const res = await axios.post('http://localhost:4000/api/auth/login', form);
+        const cookies = new Cookie();
+        cookies.set('token', res.data.token, {path: '/'});
+        cookies.set('auth', res.data.auth, {path: '/'});
+        window.location.reload(true);
+    };
+
+    return(
+        <div className={display === true ? "form-page open": "form-page"}>
+            <p onClick={()=> onClick('i')} className="close">X</p>
+            <form onSubmit={handleSubmit} className="form">
+                <h2 className="form-title">Iniciar Sesión</h2>
+                <div className="form-campo-container">
+                    <div className="form-campo">
+                        <img src="" alt=""/>
+                        <input onChange={handleChange} placeholder="Nombre o email" type="text" name="email" value={form.email}/>
+                    </div>
+                    <div className="form-campo">
+                        <img src="" alt=""/>
+                        <input onChange={handleChange} placeholder="Contraseña" type="text" name="password" value={form.password}/>
+                    </div>
                 </div>
-                <div className="form-campo">
-                    <img src="" alt=""/>
-                    <input placeholder="Contraseña" type="text" name="" id=""/>
-                </div>
-            </div>
-            <button className="btn-primary form-button">Iniciar sesión</button>
-            <a href="" className="form-link">¿No tienes una cuentas?</a>
-        </form>
-    </div>
-);
+                <button type="submit" className="btn-primary form-button">Iniciar sesión</button>
+                <p onClick={()=>{onClick('r'); onClick('i')}} className="form-link">¿No tienes una cuentas?</p>
+            </form>
+        </div>
+    );
+};
 
 export default IniciarSesion;

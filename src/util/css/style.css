@@ -59,7 +59,7 @@ input {
   margin: 10px;
   cursor: pointer;
 }
-.nav-link a {
+.nav-link a, .nav-link p {
   color: #301D4F;
   font-size: 1.3rem;
 }
@@ -163,6 +163,7 @@ input {
 }
 .form-link {
   margin: 20px 0;
+  cursor: pointer;
   text-align: center;
   display: block;
   color: #181616;

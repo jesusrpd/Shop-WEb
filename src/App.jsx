@@ -25,7 +25,7 @@ const App = ()=>{
             <Registrarse display={displayRegistrar} onClick={handleDisplay}/>
             <div className="page">
                 <Nav onClick={handleDisplay}/>
-                <Route exact path="/" component={Inicio}/>
+                <Route exact path="/" render={ props => <Inicio {...props} onClick={handleDisplay}/>}/>
                 <Route path="/carrito" component={Carrito}/>
             </div>
         </Router>
