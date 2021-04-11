@@ -11,7 +11,7 @@ const Filtro = ()=>{
     ];
 
     return(
-        <Select className="select" placeholder="Departamentos" options={options}/>
+        <Select className="select" placeholder="Todo" options={options}/>
     );
 };
 
