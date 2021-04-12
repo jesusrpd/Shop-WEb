@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import { handleInputChange } from 'react-select/src/utils';
 
 const Filtro = ()=>{
 
@@ -10,8 +11,10 @@ const Filtro = ()=>{
         {value: 'ropa', label: 'Ropa'}
     ];
 
+    
+
     return(
-        <Select className="select" placeholder="Todo" options={options}/>
+        <Select className="select" defaultValue={options[0]} options={options}/>
     );
 };
 
