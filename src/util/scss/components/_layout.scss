@@ -4,3 +4,43 @@
     margin: auto;
     padding-top: 50px;
 }
+
+.carrito{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+
+    &-button{
+      
+    }
+
+    &-title{
+        font-size: 3rem;
+        color: color('dark');
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    &-card{
+        width: 60%;
+        height: fit-content;
+        display: flex;
+        margin: 30px auto;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 10px 10px 20px color('primary');
+        border-radius: 10px;
+
+        &-img{
+            width: 300px;
+            height: 230px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &-button{
+            display: block;
+            border: none;
+            margin: 10px 50px;
+        }
+    }
+}

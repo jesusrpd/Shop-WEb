@@ -4,9 +4,10 @@
         background: color($name);  
 
         &:hover{
-            background: lighten($color: $colo, $amount: 20);
+            background: lighten($color: $colo, $amount: 15);
         }
     }
 }
 
 @include btn('primary', color('primary'));
+@include btn('orange', color('orange'));

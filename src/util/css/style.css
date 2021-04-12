@@ -34,7 +34,14 @@ input {
   background: #301D4F;
 }
 .btn-primary:hover {
-  background: #5d389a;
+  background: #523287;
+}
+
+.btn-orange {
+  background: #FF6600;
+}
+.btn-orange:hover {
+  background: #ff944d;
 }
 
 @keyframes aparecer {
@@ -75,6 +82,38 @@ input {
   padding-top: 50px;
 }
 
+.carrito {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+}
+.carrito-title {
+  font-size: 3rem;
+  color: #181616;
+  text-align: center;
+  margin: 30px 0;
+}
+.carrito-card {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  margin: 30px auto;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 20px #301D4F;
+  border-radius: 10px;
+}
+.carrito-card-img {
+  width: 300px;
+  height: 230px;
+  border-radius: 10px 0 0 10px;
+}
+.carrito-card-button {
+  display: block;
+  border: none;
+  margin: 10px 50px;
+}
+
 .card {
   width: 300px;
   height: 400px;
@@ -109,7 +148,7 @@ input {
   border: none;
 }
 
-.btn-primary {
+.btn-primary, .btn-orange {
   padding: 5px;
   border-radius: 5px;
   color: #ffff;
