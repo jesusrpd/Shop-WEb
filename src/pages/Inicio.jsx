@@ -34,6 +34,7 @@ const Inicio = ({onClick})=>{
                     products.map(product =>(
                         <Card 
                             key={product._id} 
+                            id={product._id}
                             nombre={product.nombre} 
                             departamento={product.departamento} 
                             img={product.urlImg} 

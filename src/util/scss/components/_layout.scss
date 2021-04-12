@@ -11,7 +11,12 @@
     margin: auto;
 
     &-button{
-      
+        display: block;
+        border: none;
+        margin: 50px auto;
+        padding: 10px;
+        font-size: 2rem;
+        
     }
 
     &-title{

@@ -19,6 +19,7 @@ const IniciarSesion = ({display, onClick})=>{
         const cookies = new Cookie();
         cookies.set('token', res.data.token, {path: '/'});
         cookies.set('auth', res.data.auth, {path: '/'});
+        cookies.set('id', res.data.id, {path: '/'});
         window.location.reload(true);
     };
 

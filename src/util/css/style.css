@@ -87,6 +87,13 @@ input {
   height: fit-content;
   margin: auto;
 }
+.carrito-button {
+  display: block;
+  border: none;
+  margin: 50px auto;
+  padding: 10px;
+  font-size: 2rem;
+}
 .carrito-title {
   font-size: 3rem;
   color: #181616;
