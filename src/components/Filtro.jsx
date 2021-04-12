@@ -1,20 +1,14 @@
 import React from 'react';
-import Select from 'react-select';
-import { handleInputChange } from 'react-select/src/utils';
 
-const Filtro = ()=>{
-
-    const options = [
-        {value: 'todo', label: 'Todo'},
-        {value: 'tecnología', label: 'Tecnología'},
-        {value: 'carros', label: 'Carros'},
-        {value: 'ropa', label: 'Ropa'}
-    ];
-
-    
+const Filtro = ({onChange, value})=>{
 
     return(
-        <Select className="select" defaultValue={options[0]} options={options}/>
+        <select className="select" value={value} onChange={onChange}>
+            <option value="todo">Todo</option>
+            <option value="carros">Carros</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="ropa">Ropa</option>
+        </select>
     );
 };
 
