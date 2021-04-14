@@ -1,0 +1,38 @@
+.footer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+    background: color('primary');
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    p{
+        color: color('white');
+        margin: 5px 0;
+    }
+
+    &-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-contacto{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.icon{
+    &-footer{
+        width: 40px;
+        cursor: pointer;
+        margin: 10px;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            width: 60px;
+        }
+    }
+}

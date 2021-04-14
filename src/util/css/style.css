@@ -262,17 +262,72 @@ input {
   }
 }
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 300px;
+  position: relative;
+  top: 20%;
+  left: 40%;
+  width: 500px;
   height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   background: #ffff;
   animation: aparecer 0.3s ease-in-out;
+}
+.modal-container {
+  position: fixed;
+  width: 80%;
+  height: 100vh;
+  background: rgba(24, 22, 22, 0.5);
+}
+.modal h3 {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+.modal-close {
+  position: absolute;
+  top: -160px;
+  left: 850px;
+  color: #ffff;
+  cursor: pointer;
+  font-size: 2.5rem;
 }
 
 .cerrar {
   display: none;
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  padding: 20px 0;
+  background: #301D4F;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer p {
+  color: #ffff;
+  margin: 5px 0;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-contacto {
+  display: flex;
+  align-items: center;
+}
+
+.icon-footer {
+  width: 40px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.icon-footer:hover {
+  width: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

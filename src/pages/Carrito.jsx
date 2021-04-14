@@ -45,7 +45,7 @@ const Carrito = ()=>{
     }
 
     const handleConfirm = ()=>{
-        setModal(true);
+        setModal(!modal);
     }
 
     if (load) {
@@ -53,12 +53,12 @@ const Carrito = ()=>{
     }
     return(
         <div className="carrito">
-            <Modal className='open modal'/>
+            <Modal onClick={handleConfirm} display={modal}/>
             <h2 className="carrito-title">Carrito</h2>
             {compras.map(compra =>(
                 <Compra onClick={handleRemove} confirm={handleConfirm} key={compra._id} id={compra._id} nombre={compra.nombre} precio={compra.precio} img={compra.urlImg} departamento={compra.departamento}/>
             ))}
-            <button className="carrito-button btn-primary">Comprar todo $ {costo} Mxn.</button>
+            <button onClick={handleConfirm} className="carrito-button btn-primary">Comprar todo $ {costo} Mxn.</button>
         </div>
     );
 };

@@ -5,6 +5,7 @@ import Registrarse from './components/Registrarse';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Carrito from './pages/Carrito';
+import Footer from './components/Footer';
 
 const App = ()=>{
 
@@ -28,6 +29,7 @@ const App = ()=>{
                 <Route exact path="/" render={ props => <Inicio {...props} onClick={handleDisplay}/>}/>
                 <Route path="/carrito" component={Carrito}/>
             </div>
+            <Footer/>
         </Router>
     );
 };
