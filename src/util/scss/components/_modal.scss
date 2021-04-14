@@ -1,0 +1,13 @@
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 250px;
+    background: color('white');
+    animation: aparecer .3s ease-in-out;
+}
+
+.cerrar{
+    display: none;
+}

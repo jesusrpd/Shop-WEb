@@ -35,7 +35,7 @@ const IniciarSesion = ({display, onClick})=>{
                     </div>
                     <div className="form-campo">
                         <img src="" alt=""/>
-                        <input onChange={handleChange} placeholder="Contraseña" type="text" name="password" value={form.password}/>
+                        <input onChange={handleChange} placeholder="Contraseña" type="password" name="password" value={form.password}/>
                     </div>
                 </div>
                 <button type="submit" className="btn-primary form-button">Iniciar sesión</button>
