@@ -8,7 +8,16 @@
 .carrito{
     width: 100%;
     height: fit-content;
+    min-height: 100vh;
     margin: auto;
+
+    &-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+    }
 
     &-button{
         display: block;

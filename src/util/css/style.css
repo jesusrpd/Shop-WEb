@@ -85,7 +85,15 @@ input {
 .carrito {
   width: 100%;
   height: fit-content;
+  min-height: 100vh;
   margin: auto;
+}
+.carrito-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
 }
 .carrito-button {
   display: block;
@@ -309,6 +317,7 @@ input {
 .footer p {
   color: #ffff;
   margin: 5px 0;
+  text-align: center;
 }
 .footer-info {
   display: flex;
@@ -328,6 +337,49 @@ input {
 }
 .icon-footer:hover {
   width: 60px;
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1230px) {
+  .carrito-info {
+    flex-direction: column;
+  }
+  .carrito-card {
+    width: fit-content;
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 660px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav-link a, .nav-link p {
+    color: #301D4F;
+    font-size: 1rem;
+  }
+
+  .carrito-info {
+    flex-direction: column;
+  }
+  .carrito-card {
+    width: fit-content;
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

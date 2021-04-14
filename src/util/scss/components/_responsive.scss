@@ -1,0 +1,57 @@
+//Dispositivos medianos
+@media only screen and (min-width: 661px) and (max-width: 1230px){
+
+    .carrito{
+        &-info{
+            flex-direction: column;
+        }
+
+        &-card{
+            width: fit-content;
+            flex-direction: column;
+
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        padding: 50px;
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+//Dispositivos moviles
+@media only screen and (min-width: 300px) and (max-width: 660px){
+    .nav{
+        flex-direction: column;
+
+        &-link{
+            a, p{
+                color: color('primary');
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .carrito{
+        &-info{
+            flex-direction: column;
+        }
+
+        &-card{
+            width: fit-content;
+            flex-direction: column;
+
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        padding: 50px;
+        p{
+            font-size: 1rem;
+        }
+    }
+}
