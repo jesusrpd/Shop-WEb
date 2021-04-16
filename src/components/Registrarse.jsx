@@ -15,7 +15,7 @@ const IniciarSesion = ({display, onClick})=>{
 
     const handleSubmit = async e =>{
         e.preventDefault();
-        const res = await axios.post('http://localhost:4000/api/auth/signup', form);
+        const res = await axios.post('/api/auth/signup', form);
         const cookies = new Cookie();
         cookies.set('token', res.data.token, {path:'/'});
         cookies.set('auth', res.data.auth, {path:'/'});

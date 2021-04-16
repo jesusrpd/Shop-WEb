@@ -16,7 +16,7 @@ const Inicio = ({onClick})=>{
 
     useEffect(()=>{
         const getProducts = async ()=>{
-            const res = await axios.get(`http://localhost:4000/api/products/${filtro}`);
+            const res = await axios.get(`/api/products/${filtro}`);
             setProducts(res.data);
             setLoad(false);
         };

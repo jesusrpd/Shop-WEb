@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 
 const Modal = ({display, onClick})=>{
 
-    useEffect(()=>{
-    });
-
     return(
         <div className={display ? 'modal-container open': 'cerrar'}>
             <div className="modal">

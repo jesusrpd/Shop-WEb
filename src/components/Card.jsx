@@ -10,11 +10,10 @@ const Card = ({onClick, nombre, precio, departamento, img, id})=>{
     const [load, setLoad] = useState(false);
 
     const handleClick = async i =>{
-        setLoad(true);
         const cookies = new Cookie();
         if (cookies.get('auth')) {
-            
-            await axios.post('http://localhost:4000/api/compras', {idUser: cookies.get('id'), idCom: i});
+            setLoad(true);
+            await axios.post('/api/compras', {idUser: cookies.get('id'), idCom: i});
             setLoad(false);
             history.push('/carrito');
         }else{

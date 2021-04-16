@@ -16,13 +16,18 @@ const Carrito = ()=>{
     let history = useHistory();
 
     const getCompras = async ()=>{
-        const res = await axios.get(`http://localhost:4000/api/compras/${cookies.get('id')}`);
-        setCompras(res.data[0].compras);
-        const numeros = res.data[0].compras.map(precio=>parseInt(precio.precio.replace(",","").split(".")[0]));
-        const suma = numeros.reduce((acc, item)=>{
-            return acc = acc + item;
-        });
-        setCosto(suma);
+        const res = await axios.get(`/api/compras/${cookies.get('id')}`);
+        if (res.data[0].compras.length === 0) {
+            setCompras(null);
+            setCosto(0);
+        }else{
+            setCompras(res.data[0].compras);
+            const numeros = res.data[0].compras.map(precio=>parseInt(precio.precio.replace(",","").split(".")[0]));
+            const suma = numeros.reduce((acc, item)=>{
+                return acc = acc + item;
+            });
+            setCosto(suma);
+        }
         setLoad(false);
     };
 
@@ -37,7 +42,7 @@ const Carrito = ()=>{
 
     const handleRemove = async i =>{
         setLoad(true);
-        await axios.put(`http://localhost:4000/api/compras/${cookies.get('id')}`,{
+        await axios.put(`/api/compras/${cookies.get('id')}`,{
             idProduct: i
         });
         getCompras();
@@ -45,6 +50,9 @@ const Carrito = ()=>{
     }
 
     const handleConfirm = ()=>{
+        if (costo === 0) {
+            return null;
+        }
         setModal(!modal);
     }
 
@@ -55,9 +63,12 @@ const Carrito = ()=>{
         <div className="carrito">
             <Modal onClick={handleConfirm} display={modal}/>
             <h2 className="carrito-title">Carrito</h2>
-            {compras.map(compra =>(
-                <Compra onClick={handleRemove} confirm={handleConfirm} key={compra._id} id={compra._id} nombre={compra.nombre} precio={compra.precio} img={compra.urlImg} departamento={compra.departamento}/>
-            ))}
+            {compras === null 
+                ?<p style={{textAlign: 'center', fontSize: '2rem'}}>No tinie compras.</p>
+                :compras.map(compra =>(
+                    <Compra onClick={handleRemove} confirm={handleConfirm} key={compra._id} id={compra._id} nombre={compra.nombre} precio={compra.precio} img={compra.urlImg} departamento={compra.departamento}/>
+                ))
+            }
             <button onClick={handleConfirm} className="carrito-button btn-primary">Comprar todo $ {costo} Mxn.</button>
         </div>
     );
